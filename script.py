@@ -37,9 +37,9 @@ SSH_REMOTE_FORTIGATE = ConnectHandler(**remote_fortigate)
 SSH_LOCAL_FORTIGATE = ConnectHandler(**local_fortigate)
 
 #Send SSH commands (remote, local)
-SSH_REMOTE_FORTIGATE.send_config_set(HICT_VPN_COMMANDS)
+SSH_REMOTE_FORTIGATE.send_config_set(REMOTE_COMMANDS)
 time.sleep(5)
-SSH_LOCAL_FORTIGATE.send_config_set(BICT_VPN_COMMANDS)
+SSH_LOCAL_FORTIGATE.send_config_set(LOCAL_COMMANDS)
 
 #Stop SSH connection (remote, local)
 SSH_REMOTE_FORTIGATE.disconnect()
